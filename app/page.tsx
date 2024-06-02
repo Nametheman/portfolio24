@@ -10,7 +10,7 @@ export default function Home() {
   const [showLoader, setLoader] = useState(true);
   const [showReveal, setShowReveal] = useState(false);
   useEffect(() => {
-    const timeout = 0;
+    const timeout = 3000;
     const loaderTimeout = setTimeout(() => {
       setLoader(false);
       setShowReveal(true);
