@@ -36,7 +36,7 @@ const Hero = () => {
             variant="default"
             className="flex items-center gap-3 px-5 py-6"
           >
-            Let's Talk <TbBrandTelegram size={22} />
+            Let&apos;s Talk <TbBrandTelegram size={22} />
           </Button>
           <Button
             variant="default"
