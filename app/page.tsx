@@ -5,6 +5,8 @@ import PageReveal from "@/components/PageReveal";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import NavBar from "@/components/NavBar";
+import Hero from "@/components/Hero";
+import About from "@/components/About";
 
 export default function Home() {
   const [showLoader, setLoader] = useState(true);
@@ -23,7 +25,7 @@ export default function Home() {
 
   useEffect(() => {
     if (showReveal) {
-      const timeout = 2000;
+      const timeout = 0;
       const revealTimeout = setTimeout(() => {
         setShowReveal(false);
       }, timeout);
@@ -44,74 +46,8 @@ export default function Home() {
         className="w-full border max-w-[1440px] mx-auto"
       >
         <NavBar />
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
+        <Hero />
+        <About />
       </motion.div>
     </main>
   );
