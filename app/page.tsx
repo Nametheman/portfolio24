@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import NavBar from "@/components/NavBar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
+import Skills from "@/components/Skills";
 
 export default function Home() {
   const [showLoader, setLoader] = useState(true);
@@ -48,6 +49,7 @@ export default function Home() {
         <NavBar />
         <Hero />
         <About />
+        <Skills />
       </motion.div>
     </main>
   );
