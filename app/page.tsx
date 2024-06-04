@@ -26,7 +26,7 @@ export default function Home() {
 
   useEffect(() => {
     if (showReveal) {
-      const timeout = 0;
+      const timeout = 2000;
       const revealTimeout = setTimeout(() => {
         setShowReveal(false);
       }, timeout);
@@ -44,7 +44,7 @@ export default function Home() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1 }}
-        className="w-full border max-w-[1440px] mx-auto"
+        className="w-full max-w-[1440px] mx-auto"
       >
         <NavBar />
         <Hero />
