@@ -8,12 +8,14 @@ import NavBar from "@/components/NavBar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Skills from "@/components/Skills";
+import Experiences from "@/components/Experiences";
+import PastProjects from "@/components/PastProjects";
 
 export default function Home() {
   const [showLoader, setLoader] = useState(true);
   const [showReveal, setShowReveal] = useState(false);
   useEffect(() => {
-    const timeout = 3000;
+    const timeout = 10;
     const loaderTimeout = setTimeout(() => {
       setLoader(false);
       setShowReveal(true);
@@ -26,7 +28,7 @@ export default function Home() {
 
   useEffect(() => {
     if (showReveal) {
-      const timeout = 2000;
+      const timeout = 20;
       const revealTimeout = setTimeout(() => {
         setShowReveal(false);
       }, timeout);
@@ -50,6 +52,8 @@ export default function Home() {
         <Hero />
         <About />
         <Skills />
+        <Experiences />
+        <PastProjects />
       </motion.div>
     </main>
   );

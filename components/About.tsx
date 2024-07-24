@@ -1,5 +1,7 @@
+"use client";
+
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import photo from "@/assets/images/photo.png";
 import ExperienceCard from "./ExperienceCard";
 import { PiMedalThin } from "react-icons/pi";
@@ -8,8 +10,15 @@ import { HiOutlineUserPlus } from "react-icons/hi2";
 import { GoGoal } from "react-icons/go";
 import { Button } from "./ui/button";
 import { VscDebugStart } from "react-icons/vsc";
+import { motion } from "framer-motion";
 
 const About = () => {
+  const hiddenMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 30px, rgba(0,0,0,1) 30px, rgba(0,0,0,1) 30px)`;
+  const visibleMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 0px, rgba(0,0,0,1) 0px, rgba(0,0,0,1) 30px)`;
+
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isInView, setIsInView] = useState(false);
+
   const details = [
     {
       name: "Experience",
@@ -41,12 +50,24 @@ const About = () => {
 
       <div className="mx-auto w-full mt-10 flex justify-center profilePic">
         <div className="w-[220px] h-[220px] rounded-lg shadow rotate-12 transition-all ease-linear duration-300 aboutCard absolute -z-1"></div>
-
-        <Image
-          src={photo}
-          alt="my_picture"
-          className="w-[220px] h-[220px] object-cover rounded-lg shadow relative z-1"
-        />
+        <motion.div
+          initial={false}
+          animate={
+            isLoaded && isInView
+              ? { WebkitMaskImage: visibleMask, maskImage: visibleMask }
+              : { WebkitMaskImage: hiddenMask, maskImage: hiddenMask }
+          }
+          transition={{ duration: 1, delay: 1 }}
+          viewport={{ once: true }}
+          onViewportEnter={() => setIsInView(true)}
+        >
+          <Image
+            src={photo}
+            alt="my_picture"
+            className="w-[220px] h-[220px] object-cover rounded-lg shadow relative z-1"
+            onLoad={() => setIsLoaded(true)}
+          />
+        </motion.div>
       </div>
       <div className="mt-10 grid grid-cols-2 justify-items-center w-full mx-auto gap-3">
         {details.map((detail) => (
