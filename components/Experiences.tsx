@@ -1,5 +1,5 @@
 import React from "react";
-import ExperienceTree from "./ExperienceTree";
+import WorkTree from "./tree/WorkTree";
 
 const Experiences = () => {
   const experiences = [
@@ -47,7 +47,7 @@ const Experiences = () => {
       </p>
       <div className="mt-10">
         {experiences.map((experience) => (
-          <ExperienceTree key={experience.name} data={experience} />
+          <WorkTree key={experience.name} data={experience} />
         ))}
       </div>
     </div>

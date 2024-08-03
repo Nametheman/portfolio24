@@ -1,10 +1,10 @@
 import React from "react";
 import { cn } from "@/lib/utils";
 
-type TExperienceTreeProps = {
+type TWorkTreeProps = {
   data: any;
 };
-const ExperienceTree = ({ data }: TExperienceTreeProps) => {
+const WorkTree = ({ data }: TWorkTreeProps) => {
   return (
     <div className="flex items-start gap-5 h-[340px]">
       <div className="flex flex-col items-center h-full">
@@ -27,4 +27,4 @@ const ExperienceTree = ({ data }: TExperienceTreeProps) => {
   );
 };
 
-export default ExperienceTree;
+export default WorkTree;

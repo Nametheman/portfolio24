@@ -1,7 +1,10 @@
 import React from "react";
 import Project from "./Project";
 
+
+
 const PastProjects = () => {
+  const Projects = []
   return (
     <div className="px-8 py-[3.5rem] mb-20">
       {" "}
