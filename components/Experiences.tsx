@@ -1,5 +1,6 @@
 import React from "react";
 import WorkTree from "./tree/WorkTree";
+import AlternateReverseTimeline from "./tree/Timeline";
 
 const Experiences = () => {
   const experiences = [
@@ -43,12 +44,13 @@ const Experiences = () => {
       {" "}
       <h2 className="text-3xl text-center font-bold">Experience</h2>
       <p className="text-light text-center font-light text-xs">
-        An overview of my past experiences{" "}
+        I am grateful to have contributed to these projects{" "}
       </p>
       <div className="mt-10">
-        {experiences.map((experience) => (
+        {/* {experiences.map((experience) => (
           <WorkTree key={experience.name} data={experience} />
-        ))}
+        ))} */}
+        {<AlternateReverseTimeline data={experiences} />}
       </div>
     </div>
   );

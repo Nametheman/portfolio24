@@ -23,19 +23,19 @@ const Skills = () => {
         },
         {
           name: "Javascript",
-          percentage: 70,
-        },
-        {
-          name: "Typescript",
-          percentage: 60,
-        },
-        {
-          name: "React",
           percentage: 80,
         },
         {
+          name: "Typescript",
+          percentage: 80,
+        },
+        {
+          name: "React",
+          percentage: 90,
+        },
+        {
           name: "Next JS",
-          percentage: 70,
+          percentage: 90,
         },
         {
           name: "Angular JS",
@@ -50,24 +50,7 @@ const Skills = () => {
         { name: "styled-components", icon: styledComponents },
       ],
     },
-    {
-      name: "Backend Development",
-      tools: [
-        {
-          name: "Node JS",
-          percentage: 30,
-        },
-        {
-          name: "Express JS",
-          percentage: 50,
-        },
-        {
-          name: "Mongo DB",
-          percentage: 50,
-        },
-      ],
-      otherTools: [],
-    },
+
     {
       name: "Mobile Development",
       tools: [
@@ -92,7 +75,7 @@ const Skills = () => {
       <p className="text-light text-center font-light text-xs">
         A breakdown of my arsenal
       </p>
-      <div className="mt-10 flex flex-col gap-10">
+      <div className="mt-10 flex flex-col lg:flex-row gap-10">
         {skillSet.map((set, index) => (
           <SkillCard key={set.name} data={set} />
         ))}
