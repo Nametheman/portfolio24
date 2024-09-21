@@ -14,6 +14,7 @@ import PastProjects from "@/components/PastProjects";
 export default function Home() {
   const [showLoader, setLoader] = useState(true);
   const [showReveal, setShowReveal] = useState(false);
+  //test
   useEffect(() => {
     const timeout = 3000;
     const loaderTimeout = setTimeout(() => {
