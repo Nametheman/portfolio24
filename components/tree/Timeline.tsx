@@ -15,7 +15,7 @@ export default function AlternateReverseTimeline({ data }: Timelineprops) {
       {data &&
         data.map((item: any) => {
           return (
-            <TimelineItem>
+            <TimelineItem key={item.name}>
               <TimelineSeparator>
                 <TimelineDot />
                 <TimelineConnector />
@@ -30,7 +30,11 @@ export default function AlternateReverseTimeline({ data }: Timelineprops) {
                   </p>
                   <ul className="list-none mt-3 list-item">
                     {item.achievements.map((achievement: any) => {
-                      return <li className="mb-2 text-sm">{achievement}</li>;
+                      return (
+                        <li className="mb-2 text-sm" key={achievement}>
+                          {achievement}
+                        </li>
+                      );
                     })}
                   </ul>
                 </div>

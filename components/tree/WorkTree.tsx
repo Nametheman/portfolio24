@@ -19,7 +19,11 @@ const WorkTree = ({ data }: TWorkTreeProps) => {
         </p>
         <ul className="list-none mt-3 list-item">
           {data.achievements.map((achievement: any) => {
-            return <li className="mb-2 text-sm">{achievement}</li>;
+            return (
+              <li className="mb-2 text-sm" key={achievement}>
+                {achievement}
+              </li>
+            );
           })}
         </ul>
       </div>

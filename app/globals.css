@@ -121,3 +121,26 @@ h6 {
 .profilePic:hover .aboutCard {
   transform: rotate(0deg);
 }
+
+.projectImg {
+  /* Parallax factor and radius hardcoded */
+  width: 250px; /* image size */
+  aspect-ratio: 1.1; /* Adjusted ratio (1 + 0.1 parallax factor) */
+  object-fit: cover;
+
+  /* Clipping and transformations */
+  clip-path: inset(0 9.09% 0 0 round 10px); /* 9.09% = 100% * 0.1 / (1 + 0.1) */
+  transform: perspective(400px) translateX(0px) rotateY(9deg); /* 9deg = 90deg * 0.1 */
+
+  transition: 0.5s; /* Smooth transition */
+}
+.projectImg:hover {
+  /* Remove clipping and reverse the transformation */
+  clip-path: inset(0 0 0 9.09% round 10px);
+  transform: perspective(400px) translateX(-9.09%) rotateY(-9deg);
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: scroll;
+}

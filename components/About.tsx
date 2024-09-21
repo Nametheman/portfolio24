@@ -3,7 +3,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import photo from "@/assets/images/photo.png";
-import ExperienceCard from "./ExperienceCard";
+import ExperienceCard from "./cards/ExperienceCard";
 import { PiMedalThin } from "react-icons/pi";
 import { VscRocket } from "react-icons/vsc";
 import { HiOutlineUserPlus } from "react-icons/hi2";
