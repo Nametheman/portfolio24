@@ -80,11 +80,12 @@ const About = () => {
           transition={{ duration: 1, delay: 1 }}
           viewport={{ once: true }}
           onViewportEnter={() => setIsInView(true)}
+          className=""
         >
           <Image
             src={photo}
             alt="my_picture"
-            className="w-[220px] h-[220px] object-cover rounded-lg shadow relative z-1"
+            className="w-[220px] h-[220px] object-cover rounded-lg shadow relative z-1 projectImg"
             onLoad={() => setIsLoaded(true)}
             style={transformStyle}
           />
