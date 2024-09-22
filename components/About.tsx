@@ -99,14 +99,14 @@ const About = () => {
           <Image
             src={photo}
             alt="my_picture"
-            className="projectImg"
+            className="w-[220px] h-[220px] object-cover rounded-lg shadow relative z-1"
             onLoad={() => setIsLoaded(true)}
             style={inlineStyles}
           />
         </motion.div>
       </div>
       <p className="text-center my-8">{gamma}</p>
-      <div className="mt-10 grid grid-cols-2 justify-items-center w-full mx-auto gap-3">
+      <div className="mt-10 grid grid-cols-2 justify-items-center w-full mx-auto gap-3 border-4">
         {details.map((detail) => (
           <ExperienceCard data={detail} key={detail.name} />
         ))}
