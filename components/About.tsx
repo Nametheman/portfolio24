@@ -68,7 +68,7 @@ const About = () => {
       <p className="text-light text-center font-light text-xs">
         Details about my journey
       </p>
-      <div className="mx-auto w-full mt-10 flex justify-center profilePic">
+      <div className="mx-auto w-full mt-10 flex justify-center profilePic border-4">
         <div className="w-[220px] h-[220px] rounded-lg shadow rotate-12 transition-all ease-linear duration-300 aboutCard absolute -z-1"></div>
         <motion.div
           initial={false}
