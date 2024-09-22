@@ -23,7 +23,8 @@ const About = () => {
   useEffect(() => {
     // Handler for the device orientation event
     const handleOrientation = (event: DeviceOrientationEvent) => {
-      setGamma(event.gamma);
+      const gamma = event.gamma || 0; // Gamma for left-right tilt
+      setGamma(gamma);
     };
 
     // Add the event listener for device orientation
@@ -35,9 +36,20 @@ const About = () => {
     };
   }, []);
 
-  const transformStyle = {
-    transform: `perspective(400px) rotateY(${gamma}deg)`,
-    transition: "transform 0.1s ease-out",
+  // Calculate rotation based on the device's gamma tilt
+
+  const parallaxFactor = 0.1; // same as --f in your CSS
+  const fValue = parallaxFactor;
+  const _f = (100 * fValue) / (1 + fValue); // Equivalent to --_f in CSS (percentage)
+  const _a = 90 * fValue; // Equivalent to --_a in CSS (rotation in degrees)
+
+  const adjustedRotation = gamma && gamma * parallaxFactor; // Scaled for smoother effect
+
+  const inlineStyles = {
+    transform: `perspective(400px) translateX(${
+      (-_f * (gamma as number)) / 90
+    }%) rotateY(${(-_a * (gamma as number)) / 90}deg)`,
+    transition: "0.5s ease-out",
   };
 
   const details = [
@@ -85,9 +97,9 @@ const About = () => {
           <Image
             src={photo}
             alt="my_picture"
-            className="w-[220px] h-[220px] object-cover rounded-lg shadow relative z-1 projectImg"
+            className="projectImg"
             onLoad={() => setIsLoaded(true)}
-            style={transformStyle}
+            style={inlineStyles}
           />
         </motion.div>
       </div>
