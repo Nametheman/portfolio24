@@ -42,6 +42,7 @@ const About = () => {
   const fValue = parallaxFactor;
   const _f = (100 * fValue) / (1 + fValue); // Equivalent to --_f in CSS (percentage)
   const _a = 90 * fValue; // Equivalent to --_a in CSS (rotation in degrees)
+  const __r = "10px";
 
   const adjustedRotation = gamma && gamma * parallaxFactor; // Scaled for smoother effect
 
@@ -50,6 +51,7 @@ const About = () => {
       (-_f * (gamma as number)) / 90
     }%) rotateY(${(-_a * (gamma as number)) / 90}deg)`,
     transition: "0.5s ease-out",
+    clipPath: `inset(0 0 0 ${_f} round ${__r})`,
   };
 
   const details = [
