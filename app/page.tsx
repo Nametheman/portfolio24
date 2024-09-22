@@ -10,6 +10,7 @@ import About from "@/components/About";
 import Skills from "@/components/Skills";
 import Experiences from "@/components/Experiences";
 import PastProjects from "@/components/PastProjects";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   const [showLoader, setLoader] = useState(true);
@@ -54,6 +55,7 @@ export default function Home() {
         <Skills />
         <Experiences />
         <PastProjects />
+        <Contact />
       </motion.div>
     </main>
   );

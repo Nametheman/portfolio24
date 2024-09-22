@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import photo from "@/assets/images/photo.png";
 import ExperienceCard from "./cards/ExperienceCard";
 import { PiMedalThin } from "react-icons/pi";
@@ -18,6 +18,22 @@ const About = () => {
 
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);
+  const [gamma, setGamma] = useState<number | null>(0);
+
+  useEffect(() => {
+    // Handler for the device orientation event
+    const handleOrientation = (event: DeviceOrientationEvent) => {
+      setGamma(event.gamma);
+    };
+
+    // Add the event listener for device orientation
+    window.addEventListener("deviceorientation", handleOrientation);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener("deviceorientation", handleOrientation);
+    };
+  }, []);
 
   const details = [
     {
@@ -47,7 +63,6 @@ const About = () => {
       <p className="text-light text-center font-light text-xs">
         Details about my journey
       </p>
-
       <div className="mx-auto w-full mt-10 flex justify-center profilePic">
         <div className="w-[220px] h-[220px] rounded-lg shadow rotate-12 transition-all ease-linear duration-300 aboutCard absolute -z-1"></div>
         <motion.div
@@ -69,6 +84,7 @@ const About = () => {
           />
         </motion.div>
       </div>
+      <p className="text-center my-8">{gamma}</p>
       <div className="mt-10 grid grid-cols-2 justify-items-center w-full mx-auto gap-3">
         {details.map((detail) => (
           <ExperienceCard data={detail} key={detail.name} />
