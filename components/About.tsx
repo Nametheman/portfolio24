@@ -35,6 +35,11 @@ const About = () => {
     };
   }, []);
 
+  const transformStyle = {
+    transform: `perspective(400px) rotateY(${gamma}deg)`,
+    transition: "transform 0.1s ease-out",
+  };
+
   const details = [
     {
       name: "Experience",
@@ -81,6 +86,7 @@ const About = () => {
             alt="my_picture"
             className="w-[220px] h-[220px] object-cover rounded-lg shadow relative z-1"
             onLoad={() => setIsLoaded(true)}
+            style={transformStyle}
           />
         </motion.div>
       </div>
