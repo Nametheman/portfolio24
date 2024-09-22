@@ -123,11 +123,11 @@ h6 {
 }
 
 .projectImg {
-  --f: 0.1; /* parallax factor (the smaller the better) */
+  --f: 0.05; /* parallax factor (the smaller the better) */
   --r: 10px; /* the radius */
 
   --_f: calc(100% * var(--f) / (1 + var(--f)));
-  --_a: calc(20deg * var(--f));
+  --_a: calc(90deg * var(--f));
 
   width: 250px; /* image size */
   aspect-ratio: calc(1 + var(--f));

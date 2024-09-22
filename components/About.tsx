@@ -38,11 +38,11 @@ const About = () => {
 
   // Calculate rotation based on the device's gamma tilt
 
-  const parallaxFactor = 0.7; // same as --f in your CSS
+  const parallaxFactor = 0.5; // same as --f in your CSS
   const fValue = parallaxFactor;
   const _f = (100 * fValue) / (1 + fValue); // Equivalent to --_f in CSS (percentage)
   const _a = 90 * fValue; // Equivalent to --_a in CSS (rotation in degrees)
-  const __r = "10px";
+  const __r = "10px"; //clip radius;
 
   const adjustedRotation = gamma && gamma * parallaxFactor; // Scaled for smoother effect
 
@@ -99,14 +99,13 @@ const About = () => {
           <Image
             src={photo}
             alt="my_picture"
-            className="w-[220px] h-[220px] object-cover rounded-lg shadow relative z-1"
+            className="w-[220px] h-[220px] object-cover rounded-lg shadow relative z-1 projectImg"
             onLoad={() => setIsLoaded(true)}
             style={inlineStyles}
           />
         </motion.div>
       </div>
-      <p className="text-center my-8">{gamma}</p>
-      <div className="mt-10 grid grid-cols-2 justify-items-center w-full mx-auto gap-3 border-4">
+      <div className="mt-10 grid grid-cols-2 justify-items-center w-full mx-auto gap-3">
         {details.map((detail) => (
           <ExperienceCard data={detail} key={detail.name} />
         ))}
