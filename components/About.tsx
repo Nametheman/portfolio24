@@ -38,7 +38,7 @@ const About = () => {
 
   // Calculate rotation based on the device's gamma tilt
 
-  const parallaxFactor = 0.1; // same as --f in your CSS
+  const parallaxFactor = 1; // same as --f in your CSS
   const fValue = parallaxFactor;
   const _f = (100 * fValue) / (1 + fValue); // Equivalent to --_f in CSS (percentage)
   const _a = 90 * fValue; // Equivalent to --_a in CSS (rotation in degrees)
