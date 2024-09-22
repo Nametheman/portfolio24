@@ -130,7 +130,7 @@ h6 {
 
   /* Clipping and transformations */
   clip-path: inset(0 9.09% 0 0 round 10px); /* 9.09% = 100% * 0.1 / (1 + 0.1) */
-  transform: perspective(400px) translateX(0px) rotateY(9deg); /* 9deg = 90deg * 0.1 */
+  transform: perspective(200px) translateX(0px) rotateY(9deg); /* 9deg = 90deg * 0.1 */
 
   transition: 0.5s; /* Smooth transition */
 }
