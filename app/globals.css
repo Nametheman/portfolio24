@@ -127,7 +127,7 @@ h6 {
   --r: 10px; /* the radius */
 
   --_f: calc(100% * var(--f) / (1 + var(--f)));
-  --_a: calc(90deg * var(--f));
+  --_a: calc(120deg * var(--f));
 
   width: 250px; /* image size */
   aspect-ratio: calc(1 + var(--f));
