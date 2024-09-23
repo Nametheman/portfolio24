@@ -21,7 +21,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <ReactLenis root>
+      <ReactLenis
+        root
+        options={{
+          smoothWheel: false,
+          duration: 1.5,
+          syncTouch: true,
+          lerp: 1,
+        }}
+      >
         <body className={poppins.className}>
           <ThemeProvider attribute="class">{children}</ThemeProvider>
         </body>
