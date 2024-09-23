@@ -25,8 +25,7 @@ export default function RootLayout({
         root
         options={{
           smoothWheel: false,
-          duration: 1.5,
-          syncTouch: true,
+          duration: 0.5,
           lerp: 1,
         }}
       >
