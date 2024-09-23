@@ -62,7 +62,7 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    const timeout = 3;
+    const timeout = 1500;
     const loaderTimeout = setTimeout(() => {
       setLoader(false);
       setShowReveal(true);
@@ -75,7 +75,7 @@ export default function Home() {
 
   useEffect(() => {
     if (showReveal) {
-      const timeout = 200;
+      const timeout = 1500;
       const revealTimeout = setTimeout(() => {
         setShowReveal(false);
       }, timeout);
