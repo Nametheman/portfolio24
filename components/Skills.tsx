@@ -16,7 +16,7 @@ const Skills = () => {
           <SkillCard key={set.name} data={set} />
         ))}
       </div>
-      <div className="flex justify-center mt-10">
+      <div className="flex justify-center mt-10 relative">
         <a href="https://github.com/nametheman" target="_blank">
           <Button className="gap-1">
             View More <VscTools size={20} />

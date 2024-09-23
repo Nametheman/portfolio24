@@ -68,7 +68,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="px-8 py-[3.5rem] mb-20">
+    <div className="px-8 py-[3.5rem] mb-20 relative">
       <h2 className="text-3xl text-center font-bold">Contact Me</h2>
       <p className="text-light text-center font-light text-xs">
         Think we can work together? Let&apos;s talk!{" "}

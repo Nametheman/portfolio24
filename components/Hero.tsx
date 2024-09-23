@@ -35,7 +35,7 @@ const Hero = () => {
           Hello, I am Emmanuel. A solution-oriented Fullstack developer that is
           passionate about building dynamic web and mobile applications{" "}
         </p>
-        <div className="mt-6 flex item  gap-6 justify-between lg:justify-normal">
+        <div className="mt-6 flex item  gap-6 justify-between lg:justify-normal relative">
           <Button variant="default" className="flex items-center gap-3 py-6">
             Let&apos;s Talk <TbBrandTelegram size={22} />
           </Button>

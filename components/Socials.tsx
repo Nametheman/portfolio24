@@ -8,7 +8,7 @@ interface SocialsProps {
 }
 const Socials = ({ className }: SocialsProps) => {
   return (
-    <div className={cn("flex flex-col gap-4 text-2xl", className)}>
+    <div className={cn("flex flex-col gap-4 text-2xl relative", className)}>
       <LuGithub className="cursor-pointer hover:scale-150 transition-all duration-300 ease-linear" />
       <LuLinkedin className="cursor-pointer hover:scale-150 transition-all duration-300 ease-linear" />
       <RiTwitterXLine className="cursor-pointer hover:scale-150 transition-all duration-300 ease-linear" />

@@ -127,7 +127,7 @@ const About = () => {
         dynamic and fucntional web applications and mobile applications is my
         fuel for delivering best possible results for your projects.{" "}
       </p>
-      <div className="flex justify-center mt-10 lg:justify-end">
+      <div className="flex justify-center mt-10 lg:justify-end relative">
         <Button className="gap-1">
           Start Building <VscDebugStart size={20} />
         </Button>
