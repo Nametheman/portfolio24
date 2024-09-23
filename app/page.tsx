@@ -11,10 +11,21 @@ import Skills from "@/components/Skills";
 import Experiences from "@/components/Experiences";
 import PastProjects from "@/components/PastProjects";
 import Contact from "@/components/Contact";
+import Lenis from "lenis";
 
 export default function Home() {
   const [showLoader, setLoader] = useState(true);
   const [showReveal, setShowReveal] = useState(false);
+
+  // useEffect(() => {
+  //   const lenis = new Lenis();
+  //   function raf(time: any) {
+  //     lenis.raf(time);
+  //     requestAnimationFrame(raf);
+  //   }
+  //   requestAnimationFrame(raf);
+  // }, []);
+
   useEffect(() => {
     const timeout = 3;
     const loaderTimeout = setTimeout(() => {
@@ -56,6 +67,9 @@ export default function Home() {
         <Experiences />
         <PastProjects />
         <Contact />
+        <p className="text-center text-xs">
+          © 2024 Emmanuel Owolabi. All rights reserved.
+        </p>
       </motion.div>
     </main>
   );

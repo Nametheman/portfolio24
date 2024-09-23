@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
+import { ReactLenis } from "@/components/scroll/Lenis";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -20,9 +21,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={poppins.className}>
-        <ThemeProvider attribute="class">{children}</ThemeProvider>
-      </body>
+      <ReactLenis root>
+        <body className={poppins.className}>
+          <ThemeProvider attribute="class">{children}</ThemeProvider>
+        </body>
+      </ReactLenis>
     </html>
   );
 }

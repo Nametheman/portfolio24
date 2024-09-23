@@ -11,6 +11,8 @@ import { GoGoal } from "react-icons/go";
 import { Button } from "./ui/button";
 import { VscDebugStart } from "react-icons/vsc";
 import { motion } from "framer-motion";
+import AboutCard from "./cards/AboutCard";
+import { GrCertificate } from "react-icons/gr";
 
 const About = () => {
   const hiddenMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 30px, rgba(0,0,0,1) 30px, rgba(0,0,0,1) 30px)`;
@@ -38,7 +40,7 @@ const About = () => {
 
   // Calculate rotation based on the device's gamma tilt
 
-  const parallaxFactor = 0.5; // same as --f in your CSS
+  const parallaxFactor = 0.3; // same as --f in your CSS
   const fValue = parallaxFactor;
   const _f = (100 * fValue) / (1 + fValue); // Equivalent to --_f in CSS (percentage)
   const _a = 90 * fValue; // Equivalent to --_a in CSS (rotation in degrees)
@@ -71,9 +73,9 @@ const About = () => {
       icon: <HiOutlineUserPlus size={20} />,
     },
     {
-      name: "Deployed",
-      value: "1 app deployed",
-      icon: <VscRocket size={20} />,
+      name: "Certifications",
+      value: "3 Certifications",
+      icon: <GrCertificate size={20} />,
     },
   ];
   return (
@@ -82,40 +84,50 @@ const About = () => {
       <p className="text-light text-center font-light text-xs">
         Details about my journey
       </p>
-      <div className="mx-auto w-full mt-10 flex justify-center profilePic">
-        <div className="w-[220px] h-[220px] rounded-lg shadow rotate-12 transition-all ease-linear duration-300 aboutCard absolute -z-1"></div>
-        <motion.div
-          initial={false}
-          animate={
-            isLoaded && isInView
-              ? { WebkitMaskImage: visibleMask, maskImage: visibleMask }
-              : { WebkitMaskImage: hiddenMask, maskImage: hiddenMask }
-          }
-          transition={{ duration: 1, delay: 1 }}
-          viewport={{ once: true }}
-          onViewportEnter={() => setIsInView(true)}
-          className="overflow-hidden"
-        >
-          <Image
-            src={photo}
-            alt="my_picture"
-            className="w-[220px] h-[220px] object-cover rounded-lg shadow relative z-1 projectImg"
-            onLoad={() => setIsLoaded(true)}
-            style={inlineStyles}
-          />
-        </motion.div>
+      <div className="lg:flex lg:items-center">
+        <div className="mx-auto w-full mt-10 flex justify-center profilePic">
+          <div className="w-[220px] h-[220px] lg:w-[380px] lg:h-[380px] rounded-lg shadow rotate-12 transition-all ease-linear duration-300 aboutCard absolute -z-1 lg:shadow-[#0000003d_0px_3px_8px]"></div>
+          <motion.div
+            initial={false}
+            animate={
+              isLoaded && isInView
+                ? { WebkitMaskImage: visibleMask, maskImage: visibleMask }
+                : { WebkitMaskImage: hiddenMask, maskImage: hiddenMask }
+            }
+            transition={{ duration: 1, delay: 1 }}
+            viewport={{ once: false }}
+            onViewportEnter={() => setIsInView(true)}
+            onViewportLeave={() => setIsInView(false)}
+            className="overflow-hidden"
+          >
+            <Image
+              src={photo}
+              alt="my_picture"
+              className="w-[220px] h-[220px] lg:w-[400px] lg:h-[400px] object-cover rounded-lg shadow relative z-1 projectImg lg:shadow-[#959da533_0px_8px_24px]"
+              onLoad={() => setIsLoaded(true)}
+              style={inlineStyles}
+            />
+          </motion.div>
+        </div>
+        <div>
+          <p className="mt-10 text-sm text-left leading-relaxed hidden lg:block">
+            My years of experience as a Fullstack Software Developer building
+            dynamic and fucntional web applications and mobile applications is
+            my fuel for delivering best possible results for your projects.{" "}
+          </p>
+          <div className="mt-10 grid grid-cols-2 justify-items-center w-full mx-auto gap-3">
+            {details.map((detail) => (
+              <AboutCard data={detail} key={detail.name} />
+            ))}
+          </div>
+        </div>
       </div>
-      <div className="mt-10 grid grid-cols-2 justify-items-center w-full mx-auto gap-3">
-        {details.map((detail) => (
-          <ExperienceCard data={detail} key={detail.name} />
-        ))}
-      </div>
-      <p className="mt-10 text-sm text-center leading-relaxed">
+      <p className="mt-10 text-sm text-center leading-relaxed lg:hidden">
         My years of experience as a Fullstack Software Developer building
         dynamic and fucntional web applications and mobile applications is my
         fuel for delivering best possible results for your projects.{" "}
       </p>
-      <div className="flex justify-center mt-10">
+      <div className="flex justify-center mt-10 lg:justify-end">
         <Button className="gap-1">
           Start Building <VscDebugStart size={20} />
         </Button>

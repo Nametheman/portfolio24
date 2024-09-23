@@ -115,9 +115,6 @@ h6 {
   );
 }
 
-.profilePic {
-}
-
 .profilePic:hover .aboutCard {
   transform: rotate(0deg);
 }
@@ -145,4 +142,75 @@ h6 {
   -ms-overflow-style: none;
   scrollbar-width: none;
   overflow-y: scroll;
+}
+
+.textGloss {
+  position: absolute;
+  top: 5%;
+  left: 0%;
+  transform: translate(-0%, -90%);
+  color: #fff;
+  font-weight: bold;
+  background: linear-gradient(
+    to right,
+    #4d4d4d 0,
+    rgb(199, 193, 193) 10%,
+    #4d4d4d 20%
+  );
+  background-position: 0;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate 5s infinite linear;
+  animation-fill-mode: forwards;
+}
+
+@media only screen and (min-width: 1024px) {
+  @keyframes animate {
+    0% {
+      background-position: 0;
+    }
+    50% {
+      background-position: 180px;
+    }
+    100% {
+      background-position: 600px;
+    }
+  }
+  .textGloss {
+    animation: animate 5s infinite linear;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0;
+  }
+  50% {
+    background-position: 180px;
+  }
+  100% {
+    background-position: 290px;
+  }
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
 }

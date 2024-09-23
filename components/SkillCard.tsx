@@ -7,7 +7,7 @@ interface Props {
 }
 const SkillCard: React.FC<Props> = ({ data }) => {
   return (
-    <div className="w-full border rounded-xl p-6">
+    <div className="w-full lg:w-[500px] border rounded-xl p-6">
       <h3 className="text-center text-lg font-medium mb-8">{data.name} </h3>
       {data.tools.map((tool: any) => {
         return <Skill data={tool} key={tool.name} />;
