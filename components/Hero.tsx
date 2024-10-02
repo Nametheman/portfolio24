@@ -32,7 +32,7 @@ const Hero = () => {
           <p className="font-medium">--- Frontend Engineer</p>
         </span>
         <p className="mt-6 text-[1.1rem] tracking-wide">
-          Hello, I am Emmanuel. A solution-oriented Fullstack developer that is
+          Hello, I am Emmanuel. A solution-oriented Frontend Engineer that is
           passionate about building dynamic web and mobile applications{" "}
         </p>
         <div className="mt-6 flex item  gap-6 justify-between lg:justify-normal relative">

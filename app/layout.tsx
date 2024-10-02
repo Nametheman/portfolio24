@@ -12,6 +12,18 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "Emmanuel Owolabi",
   description: "My personal portfolio website",
+  openGraph: {
+    title: "Emmanuel Owolabi",
+    description: "My personal portfolio website",
+    url: "https://www.emmycodesit.xyz/",
+    siteName: "EmmyCodesIt",
+    images: {
+      url: "https://www.emmycodesit.xyz/images/og.png",
+      width: 1920,
+      height: 1080,
+      alt: "EmmyCodesIt",
+    },
+  },
 };
 
 export default function RootLayout({

@@ -5,7 +5,7 @@ import { personalProjects } from "@/lib/data";
 const PastProjects = () => {
   const Projects = [];
   return (
-    <div className="px-8 py-[3.5rem] mb-20">
+    <div className="px-10 py-[3.5rem] mb-20">
       {" "}
       <h2 className="text-3xl text-center font-bold">My Projects</h2>
       <p className="text-light text-center font-light text-xs">

@@ -111,9 +111,9 @@ const About = () => {
         </div>
         <div>
           <p className="mt-10 text-sm text-left leading-relaxed hidden lg:block">
-            My years of experience as a Fullstack Software Developer building
-            dynamic and fucntional web applications and mobile applications is
-            my fuel for delivering best possible results for your projects.{" "}
+            My years of experience as a Frontend Software Engineer building
+            dynamic and fucntional web applications is my fuel for delivering
+            best possible results for your projects.{" "}
           </p>
           <div className="mt-10 grid grid-cols-2 justify-items-center w-full mx-auto gap-3">
             {details.map((detail) => (
@@ -123,9 +123,9 @@ const About = () => {
         </div>
       </div>
       <p className="mt-10 text-sm text-center leading-relaxed lg:hidden">
-        My years of experience as a Fullstack Software Developer building
-        dynamic and fucntional web applications and mobile applications is my
-        fuel for delivering best possible results for your projects.{" "}
+        My years of experience as a Frontend Software Engineer building dynamic
+        and fucntional web applications is my fuel for delivering best possible
+        results for your projects.{" "}
       </p>
       <div className="flex justify-center mt-10 lg:justify-end relative">
         <Button className="gap-1">
