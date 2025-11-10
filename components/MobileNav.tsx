@@ -6,11 +6,13 @@ import Link from "next/link";
 import { CiMenuFries } from "react-icons/ci";
 import { PAGE_LINKS } from "@/constants";
 import { cn } from "@/lib/utils";
+import { useState } from "react";
 
 const MobileNav = () => {
   const pathname = usePathname();
+  const [open, setOpen] = useState(false);
   return (
-    <Sheet>
+    <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger className="flex justify-center items-center">
         <CiMenuFries className="text-[32px] text-accent" />
       </SheetTrigger>
@@ -18,7 +20,7 @@ const MobileNav = () => {
         <div className="mt-32 mb-40 text-center text-2xl">
           <Link href={"/"}>
             <h1 className="text-4xl font-semibold">
-              Luke <span className="text-accent">.</span>
+              Emmy<span className="text-accent">.</span>dev
             </h1>
           </Link>
         </div>
@@ -33,6 +35,7 @@ const MobileNav = () => {
                     "text-accent border-b-2 border-accent",
                   "text-xl capitalize hover:text-accent transition-all"
                 )}
+                onClick={() => setOpen(false)}
               >
                 {link.name}
               </Link>

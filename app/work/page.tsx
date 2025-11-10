@@ -16,41 +16,67 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import { Swiper as TSwiper } from "swiper/types";
-import pj1 from "@/assets/images/thumb1.png";
+import ecozar from "@/assets/images/ecozar.png";
+import petro from "@/assets/images/petro.png";
+import payarena from "@/assets/images/payarena.png";
+import pop from "@/assets/images/pop.png";
 import WorkSliderBtns from "@/components/WorkSliderBtns";
 
 const projects = [
   {
     num: "01",
     category: "frontend",
-    title: "project 1",
+    title: "Ecozar",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, quos quisquam laborum tenetur sit placeat dolorem! Exercitationem id vero soluta?",
-    stack: [{ name: "HTML 5" }, { name: "Css 3" }, { name: "Javascript" }],
-    image: pj1,
-    live: "",
+      "Ecozar Technologies is a leading solar energy company in Nigeria providing reliable, eco-friendly power solutions for homes and businesses. Their platform highlights affordable solar installations, flexible payment plans, and expert maintenance services.",
+    stack: [
+      { name: "Next.js" },
+      { name: "Tailwind css" },
+      { name: "Typescript" },
+    ],
+    image: ecozar,
+    live: "https://ecozar.vercel.app/",
     github: "",
   },
   {
     num: "02",
-    category: "fullstack",
-    title: "project 2",
+    category: "frontend",
+    title: "Points of Purpose",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, quos quisquam laborum tenetur sit placeat dolorem! Exercitationem id vero soluta?",
-    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Node.js" }],
-    image: pj1,
-    live: "",
+      "Points of Purpose is a community-engagement platform that empowers individuals and organizations to make meaningful contributions. Participants earn points by joining workshops, volunteer events and initiatives, and later redeem those points for rewards.",
+    stack: [
+      { name: "Next.js" },
+      { name: "Tailwind css" },
+      { name: "Typescript" },
+    ],
+    image: pop,
+    live: "https://pop-production.vercel.app/",
     github: "",
   },
   {
     num: "03",
-    category: "frontend",
-    title: "project 3",
+    category: "fullstack",
+    title: "Petrodata",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, quos quisquam laborum tenetur sit placeat dolorem! Exercitationem id vero soluta?",
-    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Node.js" }],
-    image: pj1,
-    live: "",
+      "Petrodata by Diophalytics is a real-time petroleum data analytics platform that empowers businesses with actionable market intelligence. It provides fuel pricing insights, and analytical dashboards that support decision-making in Nigeria’s energy sector.",
+    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Nest.js" }],
+    image: petro,
+    live: "https://petrodata.diophalytics.com/",
+    github: "",
+  },
+  {
+    num: "04",
+    category: "frontend",
+    title: "Payarena",
+    description:
+      "Payarena is a dynamic payments platform in Nigeria that offers an all-in-one hub for bills payments, airtime & data top-ups, value-added services and fund transfers. Built to support Nigeria’s cashless-economy drive through web, mobile and POS payments.",
+    stack: [
+      { name: "React.js" },
+      { name: "Javascript" },
+      { name: "Tailwind css" },
+    ],
+    image: payarena,
+    live: "https://payarena.com/",
     github: "",
   },
 ];
@@ -80,7 +106,7 @@ const Work = () => {
                 {project.num}
               </div>
               <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
-                {project.category} project
+                {project.title}
               </h2>
               <p className="text-white/60">{project.description}</p>
               <ul className="flex gap-4">
@@ -95,7 +121,7 @@ const Work = () => {
               </ul>
               <div className="border border-white/20"></div>
               <div className="flex items-center gap-4">
-                <Link href={project.live}>
+                <Link href={project.live} target="_blank">
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
@@ -107,7 +133,7 @@ const Work = () => {
                     </Tooltip>
                   </TooltipProvider>
                 </Link>
-                <Link href={project.github}>
+                {/* <Link href={project.github}>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
@@ -118,7 +144,7 @@ const Work = () => {
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>

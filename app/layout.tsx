@@ -6,6 +6,7 @@ import { ReactLenis } from "@/components/scroll/Lenis";
 import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
 import StairTransition from "@/components/StairTransition";
+import { Toaster } from "@/components/ui/sonner";
 
 const jetBrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -38,11 +39,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={jetBrainsMono.variable}>
-        {/* <ThemeProvider attribute="class"> */}
         <Header />
         <StairTransition />
         <PageTransition>{children}</PageTransition>
-        {/* </ThemeProvider> */}
+        <Toaster richColors />
       </body>
     </html>
   );

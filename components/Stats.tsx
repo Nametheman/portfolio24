@@ -1,15 +1,33 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import CountUp from "react-countup";
 
-const stats = [
-  { num: 12, text: "Years of experience" },
-  { num: 26, text: "Projects completed" },
-  { num: 8, text: "Technologies mastered" },
-  { num: 500, text: "Code commits" },
-];
-
 const Stats = () => {
+  const [commitCount, setCommitCount] = useState<number | null>(null);
+
+  const stats = [
+    { num: 4, text: "Years of experience" },
+    { num: 12, text: "Projects completed" },
+    { num: 6, text: "Technologies mastered" },
+    { num: commitCount ?? 0, text: "Code commits" },
+  ];
+
+  useEffect(() => {
+    const fetchCommitCount = async () => {
+      try {
+        const response = await fetch("/api/github-commits");
+        const data = await response.json();
+        console.log(data);
+        setCommitCount(data.totalCommits);
+      } catch (error) {
+        console.error("Failed to fetch commit count:", error);
+      }
+    };
+
+    fetchCommitCount();
+  }, []);
+
   return (
     <section className="pt-4 pb-12 xl:pt-0 xl:pb-0">
       <div className="container mx-auto">

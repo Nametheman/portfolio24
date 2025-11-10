@@ -8,28 +8,28 @@ const services = [
     num: "01",
     title: "Web Development",
     description:
-      "Lorem ipsum dolot jkdjfwfugwfiwf wy fiwhfiwhfi whifwi fiwfi wifw",
+      "Responsive, accessible websites and web apps using Next.js, React, and TypeScript—optimized for performance, SEO, and maintainability.",
     href: "",
   },
   {
     num: "02",
     title: "Mobile Development",
     description:
-      "Lorem ipsum dolot jkdjfwfugwfiwf wy fiwhfiwhfi whifwi fiwfi wifw",
+      "Cross‑platform mobile apps with React Native and Expo, delivering smooth UX, native performance, and reliable CI/CD.",
     href: "",
   },
   {
     num: "03",
     title: "Technical/Content Writing",
     description:
-      "Lorem ipsum dolot jkdjfwfugwfiwf wy fiwhfiwhfi whifwi fiwfi wifw",
+      "Clear, developer‑focused documentation, tutorials, and articles that explain complex topics with practical, SEO‑friendly examples.",
     href: "",
   },
   {
     num: "04",
     title: "SEO Optimization",
     description:
-      "Lorem ipsum dolot jkdjfwfugwfiwf wy fiwhfiwhfi whifwi fiwfi wifw",
+      "Technical SEO audits, Core Web Vitals improvements, structured data, and content strategy to grow organic traffic.",
     href: "",
   },
 ];

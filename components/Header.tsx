@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Button } from "./ui/button";
 import Nav from "./Nav";
 import MobileNav from "./MobileNav";
+import { GiCoffeeCup } from "react-icons/gi";
 
 const Header = () => {
   return (
@@ -10,15 +11,18 @@ const Header = () => {
       <div className="container mx-auto flex justify-between items-center">
         <Link href={"/"}>
           <h1 className="text-4xl font-semibold">
-            Luke <span className="text-accent">.</span>
+            Emmy<span className="text-accent">.</span>dev
           </h1>
         </Link>
 
         {/* desktop nav */}
         <div className="hidden xl:flex items-center gap-8">
           <Nav />
-          <Link href={"/contact"}>
-            <Button>Hire me</Button>
+          <Link href={"/https://buymeacoffee.com/owoemma594"} target="_blank">
+            <Button className="gap-2">
+              <GiCoffeeCup />
+              Buy me coffee
+            </Button>
           </Link>
         </div>
 

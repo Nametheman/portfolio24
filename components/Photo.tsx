@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import me from "@/assets/images/me4.png";
+import me from "@/assets/images/newme.png";
 
 const Photo = () => {
   return (
@@ -19,15 +19,14 @@ const Photo = () => {
             opacity: 1,
             transition: { delay: 2.4, duration: 0.4, ease: "easeInOut" },
           }}
-          className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute"
+          className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute flex items-center justify-center"
         >
           <Image
             src={me}
             priority
             quality={100}
-            fill
-            alt=""
-            className="object-contain"
+            alt="Emmanuel"
+            className="object-contain w-[85%] h-[85%]"
           />
         </motion.div>
 
