@@ -1,12 +1,17 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import { ReactLenis } from "@/components/scroll/Lenis";
+import Header from "@/components/Header";
+import PageTransition from "@/components/PageTransition";
+import StairTransition from "@/components/StairTransition";
+import { Toaster } from "@/components/ui/sonner";
 
-const poppins = Poppins({
+const jetBrainsMono = JetBrains_Mono({
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
+  variable: "--font-jetbrainsmono",
 });
 
 export const metadata: Metadata = {
@@ -15,10 +20,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Emmanuel Owolabi",
     description: "My personal portfolio website",
-    url: "https://www.emmycodesit.xyz/",
+    url: "https://www.devemmy.xyz/",
     siteName: "EmmyCodesIt",
     images: {
-      url: "https://www.emmycodesit.xyz/images/og.png",
+      url: "https://www.devemmy.xyz/images/og.png",
       width: 1920,
       height: 1080,
       alt: "EmmyCodesIt",
@@ -33,18 +38,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <ReactLenis
-        root
-        options={{
-          smoothWheel: false,
-          duration: 0.5,
-          lerp: 1,
-        }}
-      >
-        <body className={poppins.className}>
-          <ThemeProvider attribute="class">{children}</ThemeProvider>
-        </body>
-      </ReactLenis>
+      <body className={jetBrainsMono.variable}>
+        <Header />
+        <StairTransition />
+        <PageTransition>{children}</PageTransition>
+        <Toaster richColors />
+      </body>
     </html>
   );
 }
