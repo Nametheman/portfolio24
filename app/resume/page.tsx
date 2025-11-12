@@ -58,13 +58,13 @@ const experience = {
     {
       compqny: "Noemdek Ltd",
       position: "Lead Frontend Engineer",
-      duration: "2023 - 2025",
+      duration: "2023 - Present",
     },
-    {
-      compqny: "Quickcheck",
-      position: "Mobile Engineer",
-      duration: "2025 - Present",
-    },
+    // {
+    //   compqny: "Quickcheck",
+    //   position: "Mobile Engineer",
+    //   duration: "2025 - Present",
+    // },
   ],
 };
 
