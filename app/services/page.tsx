@@ -20,16 +20,16 @@ const services = [
   },
   {
     num: "03",
-    title: "Technical/Content Writing",
+    title: "Backend Development",
     description:
-      "Clear, developer‑focused documentation, tutorials, and articles that explain complex topics with practical, SEO‑friendly examples.",
+      "Building scalable, maintainable, and secure backend services using Nest.js and TypeScript—leveraging best practices and modern patterns.",
     href: "",
   },
   {
     num: "04",
-    title: "SEO Optimization",
+    title: "Technical/Content Writing",
     description:
-      "Technical SEO audits, Core Web Vitals improvements, structured data, and content strategy to grow organic traffic.",
+      "Clear, developer‑focused documentation, tutorials, and articles that explain complex topics with practical, SEO‑friendly examples.",
     href: "",
   },
 ];
@@ -48,7 +48,7 @@ const Sercvices = () => {
           {services.map((service, index) => {
             return (
               <div
-                key={index}
+                key={`service-${index}`}
                 className="flex-1 flex flex-col justify-center gap-6 group"
               >
                 <div className="w-full flex justify-between items-center">

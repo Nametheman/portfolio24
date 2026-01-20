@@ -30,7 +30,7 @@ const about = {
   info: [
     { fieldName: "Name", fieldVaue: "Emmanuel Owolabi" },
     { fieldName: "Phone", fieldVaue: "(+234) 706 614 0323" },
-    { fieldName: "Experience", fieldVaue: "4+ Years" },
+    { fieldName: "Experience", fieldVaue: "5+ Years" },
     { fieldName: "Stack", fieldVaue: "Fullstack" },
     { fieldName: "Nationality", fieldVaue: "African" },
     { fieldName: "Email", fieldVaue: "owoemma59@gmail.com" },
@@ -60,11 +60,11 @@ const experience = {
       position: "Lead Frontend Engineer",
       duration: "2023 - Present",
     },
-    // {
-    //   compqny: "Quickcheck",
-    //   position: "Mobile Engineer",
-    //   duration: "2025 - Present",
-    // },
+    {
+      compqny: "Quickcheck",
+      position: "Mobile Engineer",
+      duration: "2025 - Present",
+    },
   ],
 };
 
@@ -193,7 +193,7 @@ const Resume = () => {
                       {education.items.map((item, index) => {
                         return (
                           <li
-                            key={index}
+                            key={`education-${index}`}
                             className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                           >
                             <span className="text-accent">{item.duration}</span>
@@ -229,7 +229,7 @@ const Resume = () => {
                     <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
                       {skills.skillList.map((skill, index) => {
                         return (
-                          <li key={index}>
+                          <li key={`skill-${index}`}>
                             <TooltipProvider delayDuration={100}>
                               <Tooltip>
                                 <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
@@ -268,7 +268,7 @@ const Resume = () => {
                     {about.info.map((item, index) => {
                       return (
                         <li
-                          key={index}
+                          key={`about-${index}`}
                           className="flex items-center justify-center xl:justify-start gap-4"
                         >
                           <span className="text-white/60">

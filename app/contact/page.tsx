@@ -69,7 +69,7 @@ const Contact = () => {
 
   const handleFormSubmit = (
     values: TFormField,
-    { resetForm }: FormikHelpers<TFormField>
+    { resetForm }: FormikHelpers<TFormField>,
   ) => {
     setSendingMessage(true);
     console.log("Form Submitted: ", values);
@@ -83,7 +83,7 @@ const Contact = () => {
         form.current as HTMLFormElement,
         {
           publicKey: "cDd6JvoNoNSWwVz-M",
-        }
+        },
       )
       .then(
         () => {
@@ -95,7 +95,7 @@ const Contact = () => {
           toast.error("Error sending message!");
 
           console.log("FAILED...", error.text);
-        }
+        },
       )
       .finally(() => {
         setSendingMessage(false);
@@ -203,8 +203,8 @@ const Contact = () => {
                               <SelectItem value="Technical/Content Writing">
                                 Technical/Content Writings
                               </SelectItem>
-                              <SelectItem value="SEO Optimization">
-                                SEO Optimization
+                              <SelectItem value="Fullstack Development">
+                                Fullstack Development
                               </SelectItem>
                             </SelectGroup>
                           </SelectContent>

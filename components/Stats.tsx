@@ -7,8 +7,8 @@ const Stats = () => {
   const [commitCount, setCommitCount] = useState<number | null>(null);
 
   const stats = [
-    { num: 4, text: "Years of experience" },
-    { num: 12, text: "Projects completed" },
+    { num: 5, text: "Years of experience" },
+    // { num: 15, text: "Projects completed" },
     { num: 6, text: "Technologies mastered" },
     { num: commitCount ?? 0, text: "Code commits" },
   ];
