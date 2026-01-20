@@ -20,26 +20,69 @@ import ecozar from "@/assets/images/ecozar.png";
 import petro from "@/assets/images/petro.png";
 import payarena from "@/assets/images/payarena.png";
 import pop from "@/assets/images/pop.png";
+import PMB from "@/assets/images/PMB.png";
+import qc from "@/assets/images/QC.png";
+import farmgreene from "@/assets/images/farmgreene.png";
+import residify from "@/assets/images/Residify.png";
 import WorkSliderBtns from "@/components/WorkSliderBtns";
 
 const projects = [
   {
     num: "01",
-    category: "frontend",
-    title: "Ecozar",
+    category: "mobile",
+    title: "PayMyBills - Bills Payment App",
     description:
-      "Ecozar Technologies is a leading solar energy company in Nigeria providing reliable, eco-friendly power solutions for homes and businesses. Their platform highlights affordable solar installations, flexible payment plans, and expert maintenance services.",
+      "Keep a detailed record of all your expenses, ensuring you know exactly where your money goes. Recharge your phone or internet instantly whenever you need it, all through the convenience and ease of PayMyBillsNg.",
     stack: [
-      { name: "Next.js" },
-      { name: "Tailwind css" },
+      { name: "React Native" },
       { name: "Typescript" },
+      { name: "PostgreSQL" },
+      { name: "Express.js" },
     ],
-    image: ecozar,
-    live: "https://ecozar.vercel.app/",
+    image: PMB,
+    live: "https://paymybills.ng/",
     github: "",
   },
   {
     num: "02",
+    category: "frontend",
+    title: "QuickCheck Loan App",
+    description:
+      "Experience financial freedom with the QuickCheck Loan App—access fast cash directly from your smartphone without the hassle of collateral or guarantors.",
+    stack: [{ name: "React Native" }, { name: "Typescript" }],
+    image: qc,
+    live: "https://www.quickcheck.ng/",
+    github: "",
+  },
+  {
+    num: "03",
+    category: "frontend",
+    title: "Residify - Estate Management Platform",
+    description:
+      "A resident management mobile application that aids in the automation of the manual process that facility managers have been using to coordinate daily activities within the estate.",
+    stack: [
+      { name: "React.js" },
+      { name: "React Native" },
+      { name: "Typescript" },
+      { name: "PHP" },
+    ],
+    image: residify,
+    live: "https://residify.ng/",
+    github: "",
+  },
+  {
+    num: "04",
+    category: "fullstack",
+    title: "Petrodata",
+    description:
+      "Petrodata by Diophalytics is a real-time petroleum data analytics platform that empowers businesses with actionable market intelligence. It provides fuel pricing insights, and analytical dashboards that support decision-making in Nigeria’s energy sector.",
+    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Nest.js" }],
+    image: petro,
+    live: "https://petrodata.diophalytics.com/",
+    github: "",
+  },
+  {
+    num: "05",
     category: "frontend",
     title: "Points of Purpose",
     description:
@@ -54,18 +97,40 @@ const projects = [
     github: "",
   },
   {
-    num: "03",
-    category: "fullstack",
-    title: "Petrodata",
+    num: "06",
+    category: "frontend",
+    title: "Farmgreene",
     description:
-      "Petrodata by Diophalytics is a real-time petroleum data analytics platform that empowers businesses with actionable market intelligence. It provides fuel pricing insights, and analytical dashboards that support decision-making in Nigeria’s energy sector.",
-    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Nest.js" }],
-    image: petro,
-    live: "https://petrodata.diophalytics.com/",
+      "Access affordable equipment, track commodity prices, and join cooperative funding pools. Farmgreene bridges the gap between subsistence and success.",
+    stack: [
+      { name: "Next.js" },
+      { name: "Nest.js" },
+      { name: "Tailwind css" },
+      { name: "Typescript" },
+      { name: "PostgreSQL" },
+    ],
+    image: farmgreene,
+    live: "https://farmgreene.online/",
     github: "",
   },
   {
-    num: "04",
+    num: "07",
+    category: "frontend",
+    title: "Ecozar",
+    description:
+      "Ecozar Technologies is a leading solar energy company in Nigeria providing reliable, eco-friendly power solutions for homes and businesses. Their platform highlights affordable solar installations, flexible payment plans, and expert maintenance services.",
+    stack: [
+      { name: "Next.js" },
+      { name: "Tailwind css" },
+      { name: "Typescript" },
+    ],
+    image: ecozar,
+    live: "https://ecozar.vercel.app/",
+    github: "",
+  },
+
+  {
+    num: "08",
     category: "frontend",
     title: "Payarena",
     description:
@@ -109,7 +174,7 @@ const Work = () => {
                 {project.title}
               </h2>
               <p className="text-white/60">{project.description}</p>
-              <ul className="flex gap-4">
+              <ul className="flex gap-4 flex-wrap">
                 {project.stack.map((item, index) => {
                   return (
                     <li key={index} className="text-xl text-accent">
@@ -158,13 +223,13 @@ const Work = () => {
               {projects.map((project, index) => {
                 return (
                   <SwiperSlide key={index} className="w-full">
-                    <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
-                      <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
+                    <div className="h-[250px] md:h-[460px] relative group flex justify-center items-center">
+                      <div className="absolute top-0 bottom-0 w-full h-full z-10"></div>
                       <div className="relative w-full h-full">
                         <Image
                           src={project.image}
                           fill
-                          className="object-cover"
+                          className="object-contain object-center"
                           alt=""
                         />
                       </div>
