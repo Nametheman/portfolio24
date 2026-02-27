@@ -60,11 +60,11 @@ const experience = {
       position: "Lead Frontend Engineer",
       duration: "2023 - Present",
     },
-    {
-      compqny: "Quickcheck",
-      position: "Mobile Engineer",
-      duration: "2025 - Present",
-    },
+    // {
+    //   compqny: "Quickcheck",
+    //   position: "Mobile Engineer",
+    //   duration: "2025 - Present",
+    // },
   ],
 };
 

@@ -29,7 +29,7 @@ export default function Home() {
                 size="lg"
                 className="uppercase flex items-center gap-2"
               >
-                <a href="/emmy_cv.pdf" download>
+                <a href="/emmanuelll.pdf" download>
                   <span>Download CV</span>
                   <FiDownload className="text-xl" />
                 </a>
